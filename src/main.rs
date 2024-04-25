@@ -4,16 +4,14 @@ use solana_sdk::{
     signature::{Keypair, Signer},
     pubkey::{Pubkey},
     commitment_config::{CommitmentConfig},
-    transaction::{Transaction}
-};
-use solana_client::rpc_client::RpcClient;
-use solana_program::{
+    transaction::{Transaction},
     system_instruction,
     native_token::{
         lamports_to_sol,
         sol_to_lamports
     }
 };
+use solana_client::rpc_client::RpcClient;
 
 use std::time::Duration;
 use std::thread::sleep;
