@@ -224,8 +224,13 @@ mod executor {
         output = output.replace("[", "");
         output = output.replace("]", "");
     
-        let temp: Vec<_> = output.split(",").collect();
-        let mut secret_key: Vec<_> = temp.iter().map(|byte| byte.parse::<u8>().unwrap()).collect();
+        let temp: Vec<_> = output
+                .split(",")
+                .collect();
+        let mut secret_key: Vec<_> = temp
+                .iter()
+                .map(|byte| byte.parse::<u8>().unwrap())
+                .collect();
     
         return secret_key;
     }
