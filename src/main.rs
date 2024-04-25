@@ -1,5 +1,3 @@
-#![allow(warnings)]
-
 use solana_sdk::{
     signature::{Keypair, Signer},
     pubkey::{Pubkey},
@@ -13,12 +11,16 @@ use solana_sdk::{
 };
 use solana_client::rpc_client::RpcClient;
 
-use std::time::Duration;
-use std::thread::sleep;
-use std::io;
-use std::io::prelude::*;
-use std::fs::File;
-use std::fs::OpenOptions;
+use std::{
+    time::Duration,
+    thread::sleep,
+    io,
+    io::prelude::*,
+    fs::{
+        File,
+        OpenOptions
+    }
+};
 
 use clearscreen;
 use spinoff::{Spinner, spinners, Color};
